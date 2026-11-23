@@ -1,13 +1,12 @@
 # Sistema de Gestão de Almoxarifado e Ferramentas
 
-## Integrantes
+## Integrnte
 - Kevin Alves Soalheiro
-- Thiago Torres
 
 ## Descrição e motivação
-O projeto propõe um sistema em C++ para organizar o controle de materiais e ferramentas de um almoxarifado. Ele permitirá cadastrar itens, consultar quantidades disponíveis, registrar empréstimos e devoluções de ferramentas e emitir relatórios simples.
+O projeto propõe um sistema em C++ para organizar o controle de materiais e ferramentas de um almoxarifado como cadastrar itens, consultar quantidades disponíveis, registrar empréstimos e devoluções de ferramentas e emitir relatórios simples
 
-O tema foi escolhido porque o registro manual pode dificultar o acompanhamento de estoques e de ferramentas retiradas. O sistema busca tornar essas informações mais organizadas e facilitar a identificação de materiais com estoque baixo.
+Como o registro manual pode dificultar o acompanhamento de estoques e de ferramentas retiradas, utiliza-se o sistema para que a busca torne essas informações mais organizadas e de facíl identificação
 
 ## Objetivos
 - Cadastrar materiais, ferramentas e usuários.
@@ -32,5 +31,3 @@ doxygen Doxyfile
 ```
 
 A documentação será criada em `docs/doxygen/html/`.
-
-**Situação atual:** o C6 define apenas as assinaturas dos métodos. As implementações serão desenvolvidas nas próximas etapas.
