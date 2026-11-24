@@ -4,7 +4,6 @@ FLAGS = -std=c++17 -Wall -Wextra -Iinclude
 CXXFLAGS = $(FLAGS) -O0 -g --coverage
 LDFLAGS = --coverage
 
-# Nao incluir o main do programa nos testes.
 FONTES = $(filter-out src/main.cpp,$(wildcard src/*.cpp))
 TESTES = tests/doctest_main.cpp $(filter-out tests/test_almoxarifado.cpp,$(wildcard tests/test_*.cpp))
 EXECUTAVEL = build/testes.exe
