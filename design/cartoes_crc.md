@@ -1,7 +1,7 @@
 # C5 — Cartões CRC
 
 **Projeto:** Sistema de Gestão de Almoxarifado e Ferramentas  
-**Equipe:** Kevin Alves Soalheiro e Thiago Torres
+**Equipe:** Kevin Alves Soalheiro
 
 ## CRC01 — Usuario
 **Responsabilidades:**

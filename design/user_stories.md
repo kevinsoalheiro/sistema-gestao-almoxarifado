@@ -1,52 +1,104 @@
-# C5 — User Stories
+## C5 — Cartões CRC
 
-**Projeto:** Sistema de Gestão de Almoxarifado e Ferramentas  
-**Equipe:** Kevin Alves Soalheiro e Thiago Torres
+**Projeto: Sistema de Gestão de Almoxarifado e Ferramentas**
+**Integrante: Kevin Alves Soalheiro**
 
-## US01 — Cadastrar material
-**Como** almoxarife, **quero** cadastrar materiais **para** controlar o estoque.
+## CRC01 — Usuario
 
-**Critérios de aceitação:**
-1. Informar código, nome e quantidade do material.
-2. Impedir cadastro com código repetido.
-3. Confirmar quando o cadastro for realizado.
+**Responsabilidades:**
 
-## US02 — Cadastrar ferramenta
-**Como** almoxarife, **quero** cadastrar ferramentas **para** acompanhar sua disponibilidade.
+Guardar o ID do usuário.
 
-**Critérios de aceitação:**
-1. Informar código e nome da ferramenta.
-2. Impedir cadastro com código repetido.
-3. Registrar a ferramenta como disponível ao cadastrar.
+Guardar o nome do usuário.
 
-## US03 — Consultar estoque
-**Como** funcionário, **quero** consultar o estoque **para** saber o que está disponível.
+Saber se o usuário é almoxarife, funcionário ou gerente.
 
-**Critérios de aceitação:**
-1. Listar os materiais cadastrados e suas quantidades.
-2. Listar as ferramentas e sua disponibilidade.
-3. Permitir buscar um item pelo código.
+Informar o nome e o tipo do usuário.
 
-## US04 — Retirar ferramenta
-**Como** funcionário, **quero** retirar uma ferramenta **para** usá-la no trabalho.
+Verificar se o usuário pode gerenciar o estoque.
 
-**Critérios de aceitação:**
-1. Informar o funcionário e a ferramenta da retirada.
-2. Permitir a retirada somente se a ferramenta estiver disponível.
-3. Registrar a retirada e marcar a ferramenta como indisponível.
+Colaborações: Estoque e Emprestimo.
 
-## US05 — Devolver ferramenta
-**Como** funcionário, **quero** devolver uma ferramenta **para** liberá-la para outros usos.
+## CRC02 — Material
 
-**Critérios de aceitação:**
-1. Localizar uma retirada ainda não devolvida.
-2. Registrar a devolução da ferramenta.
-3. Marcar a ferramenta como disponível novamente.
+**Responsabilidades:**
 
-## US06 — Consultar relatório
-**Como** gerente, **quero** consultar um relatório **para** acompanhar o almoxarifado.
+Guardar o código do material.
 
-**Critérios de aceitação:**
-1. Mostrar os materiais com suas quantidades.
-2. Destacar os materiais com quantidade igual ou inferior ao estoque mínimo.
-3. Mostrar as ferramentas que estão emprestadas.
+Guardar o nome do material.
+
+Controlar a quantidade disponível.
+
+Guardar a quantidade mínima que deve ter no estoque.
+
+Avisar quando a quantidade estiver baixa.
+
+Colaborações: Estoque e Relatorio.
+
+## CRC03 — Ferramenta
+
+**Responsabilidades:**:
+
+Guardar o código da ferramenta.
+
+Guardar o nome da ferramenta.
+
+Informar se está disponível ou emprestada.
+
+Marcar a ferramenta como emprestada quando alguém retirar.
+
+Deixar a ferramenta disponível novamente quando for devolvida.
+
+Colaborações: Estoque e Emprestimo.
+
+## CRC04 — Estoque
+
+**Responsabilidades:**
+
+Cadastrar novos materiais.
+
+Cadastrar novas ferramentas.
+
+Evitar que dois materiais ou duas ferramentas tenham o mesmo código.
+
+Procurar materiais e ferramentas pelo código.
+
+Mostrar os materiais cadastrados e suas quantidades.
+
+Mostrar quais ferramentas estão disponíveis ou emprestadas.
+
+Colaborações: Material, Ferramenta e Relatorio.
+
+## CRC05 — Emprestimo
+
+**Responsabilidades:**
+
+Guardar quem pegou a ferramenta.
+
+Guardar qual ferramenta foi retirada.
+
+Registrar a data da retirada.
+
+Registrar quando a ferramenta for devolvida.
+
+Informar se o empréstimo ainda está em aberto.
+
+Evitar que uma mesma devolução seja registrada duas vezes.
+
+Colaborações: Usuario, Ferramenta e Estoque.
+
+## CRC06 — Relatorio
+
+**Responsabilidades:**
+
+Consultar as informações do estoque.
+
+Mostrar os materiais e suas quantidades.
+
+Mostrar quais materiais estão com estoque baixo.
+
+Mostrar quais ferramentas estão emprestadas.
+
+Organizar essas informações para facilitar a consulta.
+
+Colaborações: Estoque, Material e Ferramenta.

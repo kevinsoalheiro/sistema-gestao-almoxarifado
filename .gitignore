@@ -1,0 +1,3 @@
+# Arquivos gerados na compilacao e nos testes
+/build/*
+!/build/.gitkeep
