@@ -42,6 +42,7 @@ int Emprestimo::getUsuarioId() const { return usuarioId_; }
 int Emprestimo::getFerramentaCodigo() const { return ferramentaCodigo_; }
 const std::string& Emprestimo::getDataRetirada() const { return dataRetirada_; }
 bool Emprestimo::estaAberto() const { return aberto_; }
+const std::string& Emprestimo::getDataDevolucao() const { return dataDevolucao_; }
 
 void Emprestimo::registrarDevolucao(const std::string& dataDevolucao) {
     if (!aberto_) {

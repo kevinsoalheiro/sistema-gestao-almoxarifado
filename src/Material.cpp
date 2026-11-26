@@ -15,6 +15,7 @@ Material::Material(int codigo, const std::string& nome, int quantidade, int esto
 int Material::getCodigo() const { return codigo_; }
 const std::string& Material::getNome() const { return nome_; }
 int Material::getQuantidade() const { return quantidade_; }
+int Material::getEstoqueMinimo() const { return estoqueMinimo_; }
 bool Material::estoqueBaixo() const { return quantidade_ <= estoqueMinimo_; }
 
 void Material::adicionar(int quantidade) {

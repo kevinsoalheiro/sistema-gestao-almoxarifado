@@ -22,6 +22,9 @@ public:
     /** @return Quantidade em estoque. */
     int getQuantidade() const;
 
+    /** @return Estoque minimo definido para o material. */
+    int getEstoqueMinimo() const;
+
     /** @brief Verifica se a quantidade atingiu o minimo. @return Verdadeiro se estiver igual ou abaixo do minimo. */
     bool estoqueBaixo() const;
 

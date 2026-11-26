@@ -26,6 +26,9 @@ public:
     /** @return Verdadeiro quando a devolucao ainda nao foi registrada. */
     bool estaAberto() const;
 
+    /** @return Data de devolucao ou string vazia quando aberto. */
+    const std::string& getDataDevolucao() const;
+
     /** @brief Registra devolucao e encerra emprestimo aberto. @param dataDevolucao Data da devolucao. */
     void registrarDevolucao(const std::string& dataDevolucao);
 };

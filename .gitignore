@@ -1,3 +1,13 @@
-# Arquivos gerados na compilacao e nos testes
+# Gerados na compilacao e nos testes
 /build/*
 !/build/.gitkeep
+*.exe
+*.o
+*.gcno
+*.gcda
+
+# Dados locais e backups nao devem ir para o repositorio
+/dados/*
+!/dados/.gitkeep
+*.tmp
+*.old
