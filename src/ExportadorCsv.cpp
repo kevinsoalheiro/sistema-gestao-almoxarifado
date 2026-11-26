@@ -7,7 +7,6 @@
 namespace fs = std::filesystem;
 
 namespace {
-// Aspas internas sao duplicadas. Texto iniciado por formula e tratado como texto.
 std::string campo(std::string valor) {
     if (!valor.empty() &&
         (valor[0] == '=' || valor[0] == '+' || valor[0] == '-' || valor[0] == '@')) {
